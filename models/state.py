@@ -27,7 +27,7 @@ class State(BaseModel, Base):
         @property
         def cities(self):
             empty = []
-            for n, value in models.storage.all(City).items():
+            for name, value in models.storage.all(City).items():
                 if value.state_id == self.id:
                     empty.append(value)
             return(empty)
