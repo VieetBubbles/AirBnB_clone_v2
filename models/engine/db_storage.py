@@ -42,7 +42,7 @@ class DBStorage:
         """
 
         if cls:
-            empty = self.__session.query(cls).all()
+            empty = self.__session.query(eval(cls)).all()
         else:
             empty = self.__session.query(State).all()
             empty += self.__session.query(City).all()
