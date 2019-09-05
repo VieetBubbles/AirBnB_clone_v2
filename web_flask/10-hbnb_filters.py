@@ -42,9 +42,9 @@ def inherit_state(id):
 def filtering():
     """Return a template of the AirBnB html page"""
     return (render_template('10-hbnb_filters.html',
-                            state_list=storage.all('State'),
-                            city_list=storage.all('City'),
-                            amenity_list=storage.all('Amenity')))
+                            states=storage.all('State'),
+                            cities=storage.all('City'),
+                            amenities=storage.all('Amenity')))
 
 if __name__ is "__main__":
     app.run(host="0.0.0.0", port=5000)
