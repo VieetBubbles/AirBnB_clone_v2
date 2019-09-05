@@ -14,8 +14,7 @@ def teardown_db(error):
 
 
 @app.route("/states_list", strict_slashes=False)
-def teardown_db():
-    storage.close()
+def teardown_tempal():
     return (render_template('7-states_list.html', states=storage.all('State')))
 
 
@@ -26,5 +25,4 @@ def list_cities():
                             cities=storage.all('City')))
 
 if __name__ is "__main__":
-    storage.close()
     app.run(host="0.0.0.0", port=5000)
