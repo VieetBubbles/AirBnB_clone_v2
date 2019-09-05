@@ -12,6 +12,7 @@ app = Flask(__name__)
 def teardown_db(error):
     storage.close()
 
+
 @app.route("/states", strict_slashes=False)
 @app.route("/states_list", strict_slashes=False)
 def teardown_tempal():
